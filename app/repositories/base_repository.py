@@ -45,7 +45,8 @@ class BaseRepository(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         obj_in_data = obj_in.model_dump()
         db_obj = self.model(**obj_in_data)
         db.add(db_obj)
-        await db.flush()
+        # await db.flush()
+        await db.commit()
         await db.refresh(db_obj)
         return db_obj
 

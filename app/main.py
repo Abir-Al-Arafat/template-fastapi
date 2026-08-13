@@ -43,6 +43,16 @@ app.add_middleware(
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 
+@app.get("/")
+async def root():
+    """Welcome / root endpoint."""
+    return {
+        "message": "Welcome to the FastAPI Template Application",
+        "docs_url": "/docs",
+        "redoc_url": "/redoc",
+    }
+
+
 @app.get("/health", tags=["health"])
 async def health_check():
     """Simple health check endpoint."""

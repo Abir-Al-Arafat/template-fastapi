@@ -29,7 +29,8 @@ class UserService:
         # Create user using repository
         db_obj = self.repository.model(**user_in_dict)
         db.add(db_obj)
-        await db.flush()
+        # await db.flush()
+        await db.commit()
         await db.refresh(db_obj)
         return db_obj
 
