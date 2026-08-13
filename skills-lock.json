@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "fastapi-templates": {
+      "source": "rmyndharis/antigravity-skills",
+      "sourceType": "github",
+      "skillPath": "skills/fastapi-templates/SKILL.md",
+      "computedHash": "2d8ee0795cf2ec7139a20c6441b4d8807e24b71b9c2ceb649cf7c2e215a8396d"
+    }
+  }
+}
