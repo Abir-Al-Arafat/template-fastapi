@@ -109,9 +109,19 @@ async def login(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Inactive user"
         )
-        
+    print(f"User", user.__dict__)
+
     access_token = create_access_token(subject=user.id)
     return {
-        "access_token": access_token,
-        "token_type": "bearer"
+        "success": "true",
+        "message": "login successful",
+        "data":{
+            "user":{
+                "id": user.id,
+                "name": user.name,
+                "email": user.email,
+                "is_active": user.is_active,
+            },
+            "token": access_token
+        }
     }
