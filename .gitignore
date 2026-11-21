@@ -3,5 +3,5 @@ __pycache__/
 .venv/
 dist/
 *.db
-config.bat
 node_modules
+config.bat
