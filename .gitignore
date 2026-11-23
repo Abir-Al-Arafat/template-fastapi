@@ -4,4 +4,3 @@ __pycache__/
 dist/
 *.db
 node_modules
-config.bat
